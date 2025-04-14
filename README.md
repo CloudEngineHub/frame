@@ -136,7 +136,7 @@ As highlighted in the paper, the training process is divided into three steps:
 ### Backbone Training
 
 ```bash
-python scripts/train.py --data /path/to/dataset --experiment backbone
+python scripts/train.py --data <path/to/dataset> --experiment backbone
 ```
 
 ### Cross Training
@@ -144,13 +144,13 @@ python scripts/train.py --data /path/to/dataset --experiment backbone
 Then, we do the Cross Caching (Section 4.4 of the paper).
 
 ```bash
-./scripts/crosstraining.sh -d /path/to/dataset
+./scripts/crosstraining.sh -d <path/to/dataset>
 ```
 
 And we cache the results.
 
 ```bash
-./scripts/crosscache.sh -d /path/to/dataset
+./scripts/crosscache.sh -d <path/to/dataset>
 ```
 
 ### STF Training
@@ -158,15 +158,16 @@ And we cache the results.
 Finally, we can train the STF model.
 
 ```bash
-python scripts/train.py --data /path/to/dataset --experiment stf
+python scripts/train.py --data <path/to/dataset> --experiment stf
 ```
 
 ## Creating a new experiment
 
-This repository is based on `hydra` for configuration management. In order to create a new experiment, you can create a new `.yaml` file in the `configs/experiments` folder.  
+This repository is based on `hydra` for configuration management.  
+In order to create a new experiment, you can create a new `.yaml` file in the `configs/experiments` folder.  
 That would be loaded automatically whenever you run a new training with `--experiment <name>` where `<name>` is the name of the new `.yaml` file.
 
-An new experiment will inherit all the parameters from the `default.yaml` file, and you can override or change them from the new experiment file.
+A new experiment will inherit all the parameters from the `default.yaml` file, and you can override or change them from the new experiment file.
 
 We refer to the `hydra` and `omegaconf` documentation for more details on how to use them.
 
