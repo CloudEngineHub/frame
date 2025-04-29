@@ -28,7 +28,7 @@ This repository contains the official implementation of the paper "FRAME: Floor-
 
 - [uv](https://docs.astral.sh/uv/getting-started/installation/) as a package manager
 
-The code has been tested only on Debian 12.0 with a NVIDIA GPUs and CUDA 11.8.  
+The code has been tested only on Debian 12.0 with NVIDIA GPUs and CUDA 11.8.  
 It should work on any OS and any accelerator, as long as a bash shell is available.
 
 ## Installation
@@ -55,7 +55,7 @@ Although that is the recommended approach, it is also possible to download it ma
 
 The dataset is publicly available and hosted on [Edmond](https://edmond.mpg.de/dataset.xhtml?persistentId=doi:10.17617/3.XARMQA).  
 It can be downloaded in two different resolutions: `256x256` and `384x384`.  
-Both version works with the provided code, but the `256x256` version is the one used in the paper.
+Both version work with the provided code, but the `256x256` version is the one used in the paper.
 
 #### Automatic Download
 
@@ -65,7 +65,7 @@ To download the dataset automatically, run the following command:
 frame download dataset --output-path <path/to/output/folder> --resolution 256
 ```
 
-This command will ask you prompt you to accept the license agreement and then download the zip file containing the dataset.  
+This command will ask prompt you to accept the license agreement and then download the zip file containing the dataset.  
 The script leverages `playwright` to open a browser in headless mode and download the dataset.
 
 If you never used `playwright` before, it might ask you to install the required browsers. You can do that by running:
@@ -90,7 +90,7 @@ This will extract the zip file in the specified output folder and convert the `m
 
 ### Usage
 
-We provide an helper script to manually inspect the dataset. It can be run as follows:
+We provide a helper script to manually inspect the dataset. It can be run as follows:
 
 ```bash
 python scripts/loop.py --help
@@ -177,7 +177,7 @@ Instructions on how to print the CAD models can be found [here](https://github.c
 
 ## Acknowledgements
 
-This project would have not been possible without some amazing open source projects. A subset of them are:
+This project would not have been possible without some amazing open source projects. A subset of them are:
 
 - [Pytorch Image Models](https://github.com/huggingface/pytorch-image-models)
 - [PyTorch](https://pytorch.org/)
