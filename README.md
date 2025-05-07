@@ -101,7 +101,7 @@ python scripts/loop.py --help
 In order to evaluate a model, you can run the following command:
 
 ```bash
-python scripts/eval.py --data <path/to/dataset> --experiment <name>
+python scripts/eval.py --data <path/to/dataset> --load <name>
 ```
 
 Where `<name>` is the name of the experiment you want to evaluate, or the path to the checkpoint file.
